@@ -1,0 +1,90 @@
+[2022-07-27 04:40:04,446]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-27 04:40:45,442]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:40:45] "GET / HTTP/1.1" 200 -
+[2022-07-27 04:41:34,776]^;INFO^;225^;configuration.py^;get_training_pipeline_config()^;Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact')
+[2022-07-27 04:41:34,862]^;INFO^;114^;pipeline.py^;run_pipeline()^;Pipeline starting.
+[2022-07-27 04:41:34,876]^;INFO^;130^;pipeline.py^;run_pipeline()^;Pipeline experiment: Experiment(experiment_id='219e7569-4d39-4918-abe1-fc3da08d9b9d', initialization_timestamp='2022-07-27-04-41-34', artifact_time_stamp='2022-07-27-04-41-34', running_status=True, start_time=datetime.datetime(2022, 7, 27, 4, 41, 34, 872635), stop_time=None, execution_time=None, message='Pipeline has been started.', experiment_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\experiment\\experiment.csv', accuracy=None, is_model_accepted=None)
+[2022-07-27 04:41:35,575]^;INFO^;64^;configuration.py^;get_data_ingestion_config()^;Data Ingestion config: DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/codeofelango/ineuronproject_storesales/main/Train.csv', tgz_download_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-27-04-41-34\\tgz_data', raw_data_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-27-04-41-34\\raw_data', ingested_train_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-27-04-41-34\\ingested_data\\train', ingested_test_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-27-04-41-34\\ingested_data\\test')
+[2022-07-27 04:41:35,576]^;INFO^;16^;data_ingestion.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-07-27 04:41:35,577]^;INFO^;126^;data_ingestion.py^;initiate_data_ingestion()^;Downloadingstarted from github location
+[2022-07-27 04:41:35,597]^;INFO^;37^;data_ingestion.py^;download_housing_data()^;Downloading file from :[https://raw.githubusercontent.com/codeofelango/ineuronproject_storesales/main/Train.csv] into :[C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\tgz_data\Train.csv]
+[2022-07-27 04:41:35,664]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:41:35] "GET /train HTTP/1.1" 200 -
+[2022-07-27 04:41:40,904]^;INFO^;39^;data_ingestion.py^;download_housing_data()^;File :[C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\tgz_data\Train.csv] has been downloaded successfully.
+[2022-07-27 04:41:40,914]^;INFO^;128^;data_ingestion.py^;initiate_data_ingestion()^;Extracting started
+[2022-07-27 04:41:40,950]^;INFO^;56^;data_ingestion.py^;extract_tgz_file()^;Extracting tgz file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\raw_data\Train.csv] into dir: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\raw_data]
+[2022-07-27 04:41:43,780]^;INFO^;60^;data_ingestion.py^;extract_tgz_file()^;Extraction completed
+[2022-07-27 04:41:43,780]^;INFO^;130^;data_ingestion.py^;initiate_data_ingestion()^;spliting from github location
+[2022-07-27 04:41:43,783]^;INFO^;74^;data_ingestion.py^;split_data_as_train_test()^;Reading csv file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\raw_data\Train.csv]
+[2022-07-27 04:41:44,565]^;INFO^;84^;data_ingestion.py^;split_data_as_train_test()^;Splitting data into train and test
+[2022-07-27 04:41:44,590]^;INFO^;89^;data_ingestion.py^;split_data_as_train_test()^;start StratifiedShuffleSplit data into train and test
+[2022-07-27 04:41:45,406]^;INFO^;94^;data_ingestion.py^;split_data_as_train_test()^;stop StratifiedShuffleSplit data into train and test in loop
+[2022-07-27 04:41:45,410]^;INFO^;104^;data_ingestion.py^;split_data_as_train_test()^;Exporting training datset to file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\ingested_data\train\Train.csv]
+[2022-07-27 04:41:46,018]^;INFO^;109^;data_ingestion.py^;split_data_as_train_test()^;Exporting test dataset to file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-27-04-41-34\ingested_data\test\Train.csv]
+[2022-07-27 04:41:46,395]^;INFO^;118^;data_ingestion.py^;split_data_as_train_test()^;Data Ingestion artifact:[DataIngestionArtifact(train_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-27-04-41-34\\ingested_data\\train\\Train.csv', test_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-27-04-41-34\\ingested_data\\test\\Train.csv', is_ingested=True, message='Data ingestion completed successfully.')]
+[2022-07-27 04:41:46,397]^;INFO^;138^;data_ingestion.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-27 04:41:46,414]^;INFO^;20^;data_validation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-27 04:41:46,417]^;INFO^;38^;data_validation.py^;is_train_test_file_exists()^;Checking if training and test file is available
+[2022-07-27 04:41:46,419]^;INFO^;50^;data_validation.py^;is_train_test_file_exists()^;Is train and test file exists?-> True
+[2022-07-27 04:42:13,353]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:42:13] "GET / HTTP/1.1" 200 -
+[2022-07-27 04:42:28,160]^;INFO^;139^;data_validation.py^;initiate_data_validation()^;Data validation artifact: DataValidationArtifact(schema_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\config\\schema.yaml', report_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_validation\\2022-07-27-04-41-34\\report.json', report_page_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_validation\\2022-07-27-04-41-34\\report.html', is_validated=True, message='Data Validation performed successully.')
+[2022-07-27 04:42:28,232]^;INFO^;146^;data_validation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-27 04:42:28,238]^;INFO^;148^;configuration.py^;get_data_transformation_config()^;Data transformation config: DataTransformationConfig(add_bedroom_per_room=True, transformed_train_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-27-04-41-34\\transformed_data\\train', transformed_test_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-27-04-41-34\\transformed_data\\test', preprocessed_object_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-27-04-41-34\\preprocessed\\preprocessed.pkl')
+[2022-07-27 04:42:28,242]^;INFO^;82^;data_transformation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-07-27 04:42:28,244]^;INFO^;148^;data_transformation.py^;initiate_data_transformation()^;Obtaining preprocessing object.
+[2022-07-27 04:42:28,366]^;INFO^;121^;data_transformation.py^;get_data_transformer_object()^;Categorical columns: ['Item_Identifier', 'Item_Fat_Content', 'Item_Type', 'Outlet_Type']
+[2022-07-27 04:42:28,367]^;INFO^;122^;data_transformation.py^;get_data_transformer_object()^;Numerical columns: ['Item_Weight', 'Item_Visibility', 'Item_MRP', 'Outlet_Establishment_Year']
+[2022-07-27 04:42:28,370]^;INFO^;152^;data_transformation.py^;initiate_data_transformation()^;Obtaining training and test file path.
+[2022-07-27 04:42:28,389]^;INFO^;170^;data_transformation.py^;initiate_data_transformation()^;Selected columns: dict_keys(['Item_Identifier', 'Item_Weight', 'Item_Fat_Content', 'Item_Visibility', 'Item_Type', 'Item_MRP', 'Outlet_Identifier', 'Outlet_Establishment_Year', 'Outlet_Size', 'Outlet_Location_Type', 'Outlet_Type', 'Item_Outlet_Sales'])
+[2022-07-27 04:42:28,390]^;INFO^;172^;data_transformation.py^;initiate_data_transformation()^;Loading training and test data as pandas dataframe.
+[2022-07-27 04:42:29,614]^;INFO^;183^;data_transformation.py^;initiate_data_transformation()^;Splitting input and target feature from training and testing dataframe.
+[2022-07-27 04:42:30,438]^;INFO^;193^;data_transformation.py^;initiate_data_transformation()^;Applying preprocessing object on training dataframe and testing dataframe
+[2022-07-27 04:42:46,915]^;INFO^;62^;data_transformation.py^;transform()^;Transforming data
+[2022-07-27 04:42:51,942]^;INFO^;62^;data_transformation.py^;transform()^;Transforming data
+[2022-07-27 04:42:53,838]^;INFO^;212^;data_transformation.py^;initiate_data_transformation()^;Saving transformed training and testing array.
+[2022-07-27 04:42:55,357]^;INFO^;219^;data_transformation.py^;initiate_data_transformation()^;Saving preprocessing object.
+[2022-07-27 04:42:56,046]^;INFO^;229^;data_transformation.py^;initiate_data_transformation()^;Data transformationa artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-27-04-41-34\\transformed_data\\train\\Train.npz', transformed_test_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-27-04-41-34\\transformed_data\\test\\Train.npz', preprocessed_object_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-27-04-41-34\\preprocessed\\preprocessed.pkl')
+[2022-07-27 04:42:56,141]^;INFO^;235^;data_transformation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-27 04:42:56,151]^;INFO^;179^;configuration.py^;get_model_trainer_config()^;Model trainer config: ModelTrainerConfig(trained_model_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\model_trainer\\2022-07-27-04-41-34\\trained_model\\model.pkl', base_accuracy=0.5, model_config_file_path='config\\model.yaml')
+[2022-07-27 04:42:56,152]^;INFO^;46^;model_trainer.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-07-27 04:42:56,154]^;INFO^;54^;model_trainer.py^;initiate_model_trainer()^;Loading transformed training dataset
+[2022-07-27 04:42:56,678]^;INFO^;58^;model_trainer.py^;initiate_model_trainer()^;Loading transformed testing dataset
+[2022-07-27 04:42:56,785]^;INFO^;62^;model_trainer.py^;initiate_model_trainer()^;Splitting training and testing input and target feature
+[2022-07-27 04:42:56,785]^;INFO^;66^;model_trainer.py^;initiate_model_trainer()^;Extracting model config file path
+[2022-07-27 04:42:56,786]^;INFO^;69^;model_trainer.py^;initiate_model_trainer()^;Initializing model factory class using above model config file: config\model.yaml
+[2022-07-27 04:42:56,843]^;INFO^;74^;model_trainer.py^;initiate_model_trainer()^;Expected accuracy: 0.5
+[2022-07-27 04:42:56,843]^;INFO^;76^;model_trainer.py^;initiate_model_trainer()^;Initiating operation model selecttion
+[2022-07-27 04:42:56,844]^;INFO^;365^;model_factory.py^;get_best_model()^;Started Initializing model from config file
+[2022-07-27 04:42:56,848]^;INFO^;202^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.linear_model' from 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\venv\\lib\\site-packages\\sklearn\\linear_model\\__init__.py'> import LinearRegression
+[2022-07-27 04:42:56,950]^;INFO^;181^;model_factory.py^;update_property_of_class()^;Executing:$ LinearRegression().fit_intercept=True
+[2022-07-27 04:42:56,955]^;INFO^;202^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.ensemble' from 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\venv\\lib\\site-packages\\sklearn\\ensemble\\__init__.py'> import RandomForestRegressor
+[2022-07-27 04:42:56,969]^;INFO^;181^;model_factory.py^;update_property_of_class()^;Executing:$ RandomForestRegressor().min_samples_leaf=3
+[2022-07-27 04:42:56,980]^;INFO^;367^;model_factory.py^;get_best_model()^;Initialized model: [InitializedModelDetail(model_serial_number='module_0', model=LinearRegression(), param_grid_search={'fit_intercept': [True, False]}, model_name='sklearn.linear_model.LinearRegression'), InitializedModelDetail(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), param_grid_search={'min_samples_leaf': [6]}, model_name='sklearn.ensemble.RandomForestRegressor')]
+[2022-07-27 04:42:56,981]^;INFO^;202^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.model_selection' from 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\venv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2022-07-27 04:42:57,019]^;INFO^;181^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).cv=5
+[2022-07-27 04:42:57,024]^;INFO^;181^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(cv=5, estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).verbose=2
+[2022-07-27 04:42:57,024]^;INFO^;233^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LinearRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-07-27 04:43:43,821]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 04:43:44,862]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:43:44] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 04:48:35,349]^;INFO^;243^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LinearRegression Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-07-27 04:48:35,391]^;INFO^;244^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+[2022-07-27 04:48:35,393]^;INFO^;245^;model_factory.py^;execute_grid_search_operation()^;LinearRegression()
+[2022-07-27 04:48:35,422]^;INFO^;246^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+[2022-07-27 04:48:35,422]^;INFO^;247^;model_factory.py^;execute_grid_search_operation()^;-4.412972218033531e+27
+[2022-07-27 04:48:35,424]^;INFO^;248^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+[2022-07-27 04:48:35,424]^;INFO^;249^;model_factory.py^;execute_grid_search_operation()^;{'fit_intercept': True}
+[2022-07-27 04:48:35,440]^;INFO^;202^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.model_selection' from 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\venv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2022-07-27 04:48:35,468]^;INFO^;181^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(estimator=RandomForestRegressor(min_samples_leaf=3),
+             param_grid={'min_samples_leaf': [6]}).cv=5
+[2022-07-27 04:48:35,473]^;INFO^;181^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(cv=5, estimator=RandomForestRegressor(min_samples_leaf=3),
+             param_grid={'min_samples_leaf': [6]}).verbose=2
+[2022-07-27 04:48:35,474]^;INFO^;233^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestRegressor Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-07-27 04:51:53,879]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:51:53] "GET / HTTP/1.1" 200 -

@@ -1,0 +1,11 @@
+[2022-07-27 19:53:04,192]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-27 19:53:24,761]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 19:53:25,188]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:53:25] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 19:53:27,237]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:53:27] "GET /static/styles.css HTTP/1.1" 200 -
+[2022-07-27 19:53:27,537]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:53:27] "[36mGET /static/logoimage.png HTTP/1.1[0m" 304 -
+[2022-07-27 19:53:29,082]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:53:29] "GET /static/image.jpg HTTP/1.1" 200 -
+[2022-07-27 19:55:14,394]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 19:55:14,483]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:55:14] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 19:55:15,394]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:55:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2022-07-27 19:55:15,499]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:55:15] "[36mGET /static/logoimage.png HTTP/1.1[0m" 304 -
+[2022-07-27 19:55:16,005]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 19:55:16] "[36mGET /static/image.jpg HTTP/1.1[0m" 304 -

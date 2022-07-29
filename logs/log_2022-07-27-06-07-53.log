@@ -1,0 +1,46 @@
+[2022-07-27 06:08:01,741]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-27 06:08:14,873]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 06:08:15,803]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 06:08:15] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 06:08:16,314]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 06:08:16] "[36mGET /static/logoimage.png HTTP/1.1[0m" 304 -
+[2022-07-27 06:08:57,745]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 06:08:57,810]^;INFO^;142^;app.py^;predict()^;prediction_data: <mlstoresales.entity.predictor.Prediction_Data object at 0x000002433142FF98>
+[2022-07-27 06:08:58,039]^;INFO^;146^;app.py^;predict()^;app_predictor: <mlstoresales.entity.predictor.App_predictor object at 0x000002433142F4A8>
+[2022-07-27 06:08:58,056]^;ERROR^;1456^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py", line 84, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\saved_models\\model.pkl'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py", line 92, in predict
+    model = load_object(file_path=model_path)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py", line 87, in load_object
+    raise HousingException(e,sys) from e
+mlstoresales.exception.HousingException: Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py] at line number: [87] error message: [[Errno 2] No such file or directory: 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\saved_models\\model.pkl']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 147, in predict
+    Item_Outlet_Sales= app_predictor.predict(X=prediction_df)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py", line 96, in predict
+    raise HousingException(e, sys) from e
+mlstoresales.exception.HousingException: Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py] at line number: [96] error message: [Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py] at line number: [87] error message: [[Errno 2] No such file or directory: 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\saved_models\\model.pkl']]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 154, in predict
+    raise HousingException(e , sys)
+mlstoresales.exception.HousingException: Error occured in script: [app.py] at line number: [154] error message: [Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py] at line number: [96] error message: [Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py] at line number: [87] error message: [[Errno 2] No such file or directory: 'C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\saved_models\\model.pkl']]]
+[2022-07-27 06:08:58,134]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 06:08:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

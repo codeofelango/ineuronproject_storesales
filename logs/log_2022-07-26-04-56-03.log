@@ -1,0 +1,42 @@
+[2022-07-26 04:56:16,964]^;INFO^;225^;configuration.py^;get_training_pipeline_config()^;Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact')
+[2022-07-26 04:56:16,987]^;INFO^;114^;pipeline.py^;run_pipeline()^;Pipeline starting.
+[2022-07-26 04:56:16,988]^;INFO^;13^;demo.py^;main()^;main function execution completed.
+[2022-07-26 04:56:16,990]^;INFO^;130^;pipeline.py^;run_pipeline()^;Pipeline experiment: Experiment(experiment_id='8e48864c-3851-431e-8330-cbd1ff5325a7', initialization_timestamp='2022-07-26-04-56-03', artifact_time_stamp='2022-07-26-04-56-03', running_status=True, start_time=datetime.datetime(2022, 7, 26, 4, 56, 16, 989690), stop_time=None, execution_time=None, message='Pipeline has been started.', experiment_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\experiment\\experiment.csv', accuracy=None, is_model_accepted=None)
+[2022-07-26 04:56:17,097]^;INFO^;64^;configuration.py^;get_data_ingestion_config()^;Data Ingestion config: DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/codeofelango/ineuronproject_storesales/main/Train.csv', tgz_download_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-26-04-56-03\\tgz_data', raw_data_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-26-04-56-03\\raw_data', ingested_train_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-26-04-56-03\\ingested_data\\train', ingested_test_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-26-04-56-03\\ingested_data\\test')
+[2022-07-26 04:56:17,098]^;INFO^;16^;data_ingestion.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-07-26 04:56:17,098]^;INFO^;126^;data_ingestion.py^;initiate_data_ingestion()^;Downloadingstarted from github location
+[2022-07-26 04:56:17,100]^;INFO^;37^;data_ingestion.py^;download_housing_data()^;Downloading file from :[https://raw.githubusercontent.com/codeofelango/ineuronproject_storesales/main/Train.csv] into :[C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\tgz_data\Train.csv]
+[2022-07-26 04:56:20,346]^;INFO^;39^;data_ingestion.py^;download_housing_data()^;File :[C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\tgz_data\Train.csv] has been downloaded successfully.
+[2022-07-26 04:56:20,347]^;INFO^;128^;data_ingestion.py^;initiate_data_ingestion()^;Extracting started
+[2022-07-26 04:56:20,350]^;INFO^;56^;data_ingestion.py^;extract_tgz_file()^;Extracting tgz file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\raw_data\Train.csv] into dir: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\raw_data]
+[2022-07-26 04:56:21,302]^;INFO^;60^;data_ingestion.py^;extract_tgz_file()^;Extraction completed
+[2022-07-26 04:56:21,302]^;INFO^;130^;data_ingestion.py^;initiate_data_ingestion()^;spliting from github location
+[2022-07-26 04:56:21,303]^;INFO^;74^;data_ingestion.py^;split_data_as_train_test()^;Reading csv file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\raw_data\Train.csv]
+[2022-07-26 04:56:21,456]^;INFO^;84^;data_ingestion.py^;split_data_as_train_test()^;Splitting data into train and test
+[2022-07-26 04:56:21,457]^;INFO^;89^;data_ingestion.py^;split_data_as_train_test()^;start StratifiedShuffleSplit data into train and test
+[2022-07-26 04:56:21,664]^;INFO^;94^;data_ingestion.py^;split_data_as_train_test()^;stop StratifiedShuffleSplit data into train and test in loop
+[2022-07-26 04:56:21,669]^;INFO^;104^;data_ingestion.py^;split_data_as_train_test()^;Exporting training datset to file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\ingested_data\train\Train.csv]
+[2022-07-26 04:56:21,987]^;INFO^;109^;data_ingestion.py^;split_data_as_train_test()^;Exporting test dataset to file: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\artifact\data_ingestion\2022-07-26-04-56-03\ingested_data\test\Train.csv]
+[2022-07-26 04:56:22,047]^;INFO^;118^;data_ingestion.py^;split_data_as_train_test()^;Data Ingestion artifact:[DataIngestionArtifact(train_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-26-04-56-03\\ingested_data\\train\\Train.csv', test_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_ingestion\\2022-07-26-04-56-03\\ingested_data\\test\\Train.csv', is_ingested=True, message='Data ingestion completed successfully.')]
+[2022-07-26 04:56:22,049]^;INFO^;138^;data_ingestion.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-26 04:56:22,057]^;INFO^;20^;data_validation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-26 04:56:22,058]^;INFO^;38^;data_validation.py^;is_train_test_file_exists()^;Checking if training and test file is available
+[2022-07-26 04:56:22,059]^;INFO^;50^;data_validation.py^;is_train_test_file_exists()^;Is train and test file exists?-> True
+[2022-07-26 04:56:35,161]^;INFO^;139^;data_validation.py^;initiate_data_validation()^;Data validation artifact: DataValidationArtifact(schema_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\config\\schema.yaml', report_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_validation\\2022-07-26-04-56-03\\report.json', report_page_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_validation\\2022-07-26-04-56-03\\report.html', is_validated=True, message='Data Validation performed successully.')
+[2022-07-26 04:56:35,228]^;INFO^;146^;data_validation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-07-26 04:56:35,232]^;INFO^;148^;configuration.py^;get_data_transformation_config()^;Data transformation config: DataTransformationConfig(add_bedroom_per_room=True, transformed_train_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-26-04-56-03\\transformed_data\\train', transformed_test_dir='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-26-04-56-03\\transformed_data\\test', preprocessed_object_file_path='C:\\fullstackdatascience\\ineuron project\\ML_StoreSales\\mlstoresales\\artifact\\data_transformation\\2022-07-26-04-56-03\\preprocessed\\preprocessed.pkl')
+[2022-07-26 04:56:35,235]^;INFO^;82^;data_transformation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-07-26 04:56:35,246]^;INFO^;153^;data_transformation.py^;initiate_data_transformation()^;Obtaining preprocessing object.
+[2022-07-26 04:56:35,475]^;INFO^;125^;data_transformation.py^;get_data_transformer_object()^;Categorical columns: ['Item_Identifier', 'Item_Fat_Content', 'Item_Type', 'Outlet_Type']
+[2022-07-26 04:56:35,475]^;INFO^;126^;data_transformation.py^;get_data_transformer_object()^;Numerical columns: ['Item_Weight', 'Item_Visibility', 'Item_MRP', 'Outlet_Establishment_Year']
+[2022-07-26 04:56:35,476]^;INFO^;157^;data_transformation.py^;initiate_data_transformation()^;Obtaining training and test file path.
+[2022-07-26 04:56:35,490]^;INFO^;165^;data_transformation.py^;initiate_data_transformation()^;Loading training and test data as pandas dataframe.
+[2022-07-26 04:56:35,648]^;INFO^;234^;data_transformation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+

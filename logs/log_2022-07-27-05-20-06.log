@@ -1,0 +1,7 @@
+[2022-07-27 05:20:24,314]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-27 05:23:01,960]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 05:23:02,461]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 05:23:02] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 05:23:03,453]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 05:23:03] "GET /static/logoimage.png HTTP/1.1" 200 -
+[2022-07-27 05:24:02,445]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 05:24:02,524]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 05:24:02] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 05:24:03,978]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 05:24:03] "[36mGET /static/logoimage.png HTTP/1.1[0m" 304 -

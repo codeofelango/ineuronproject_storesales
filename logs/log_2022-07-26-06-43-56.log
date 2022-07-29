@@ -1,0 +1,16 @@
+[2022-07-26 06:44:08,025]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-26 06:44:31,742]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [26/Jul/2022 06:44:31] "GET / HTTP/1.1" 200 -
+[2022-07-26 06:44:39,834]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [26/Jul/2022 06:44:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-07-26 06:44:47,080]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [26/Jul/2022 06:44:47] "GET /saved_models HTTP/1.1" 200 -
+[2022-07-26 06:44:53,798]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-26 06:44:53,975]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [26/Jul/2022 06:44:53] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 04:15:45,368]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:15:45] "GET /artifact HTTP/1.1" 200 -
+[2022-07-27 04:15:49,324]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:15:49] "GET /artifact/mlstoresales/artifact HTTP/1.1" 200 -
+[2022-07-27 04:15:52,005]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:15:52] "GET /artifact/mlstoresales/artifact/data_ingestion HTTP/1.1" 200 -
+[2022-07-27 04:16:00,690]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:16:00] "GET /update_model_config HTTP/1.1" 200 -
+[2022-07-27 04:16:15,126]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:16:15] "GET /artifact HTTP/1.1" 200 -
+[2022-07-27 04:16:19,702]^;INFO^;110^;app.py^;predict()^;predict called 
+[2022-07-27 04:16:19,702]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:16:19] "GET /predict HTTP/1.1" 200 -
+[2022-07-27 04:35:51,330]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:35:51] "GET / HTTP/1.1" 200 -
+[2022-07-27 04:38:08,565]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:38:08] "GET / HTTP/1.1" 200 -
+[2022-07-27 04:38:29,567]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 04:38:29] "GET / HTTP/1.1" 200 -

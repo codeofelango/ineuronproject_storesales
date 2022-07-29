@@ -1,0 +1,29 @@
+[2022-07-27 21:03:20,167]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-27 21:03:37,826]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 21:03:37] "[36mGET /static/logoimage.png HTTP/1.1[0m" 304 -
+[2022-07-27 21:03:37,817]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 21:03:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2022-07-27 21:03:38,458]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 21:03:38] "[36mGET /static/image.jpg HTTP/1.1[0m" 304 -
+[2022-07-27 21:03:59,353]^;INFO^;111^;app.py^;predict()^;predict called 
+[2022-07-27 21:03:59,484]^;INFO^;143^;app.py^;predict()^;prediction_data: <mlstoresales.entity.predictor.Prediction_Data object at 0x0000016B7429E6D8>
+[2022-07-27 21:03:59,749]^;ERROR^;1456^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "app.py", line 148, in predict
+    sc= joblib.load(r'/Ml_STORESALES/models/sc.sav')
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\joblib\numpy_pickle.py", line 579, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/Ml_STORESALES/models/sc.sav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 175, in predict
+    raise HousingException(e , sys)
+mlstoresales.exception.HousingException: Error occured in script: [app.py] at line number: [175] error message: [[Errno 2] No such file or directory: '/Ml_STORESALES/models/sc.sav']
+[2022-07-27 21:04:00,859]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [27/Jul/2022 21:04:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

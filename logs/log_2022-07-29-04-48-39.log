@@ -1,0 +1,74 @@
+[2022-07-29 04:48:45,115]^;INFO^;224^;_internal.py^;_log()^; * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-07-29 04:49:14,488]^;INFO^;111^;app.py^;predict()^;predict called 
+[2022-07-29 04:49:14,998]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [29/Jul/2022 04:49:14] "GET /predict HTTP/1.1" 200 -
+[2022-07-29 04:49:15,206]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [29/Jul/2022 04:49:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2022-07-29 04:49:15,313]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [29/Jul/2022 04:49:15] "[36mGET /static/logoimage.png HTTP/1.1[0m" 304 -
+[2022-07-29 04:49:25,646]^;INFO^;111^;app.py^;predict()^;predict called 
+[2022-07-29 04:49:25,661]^;ERROR^;1456^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "app.py", line 125, in predict
+    Item_Visibility = float(request.form['Item_Visibility'])
+ValueError: could not convert string to float: 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 175, in predict
+    raise HousingException(e , sys)
+mlstoresales.exception.HousingException: Error occured in script: [app.py] at line number: [175] error message: [could not convert string to float: ]
+[2022-07-29 04:49:25,695]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [29/Jul/2022 04:49:25] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2022-07-29 04:49:59,554]^;INFO^;111^;app.py^;predict()^;predict called 
+[2022-07-29 04:49:59,595]^;INFO^;143^;app.py^;predict()^;prediction_data: <mlstoresales.entity.predictor.Prediction_Data object at 0x000002409904E080>
+[2022-07-29 04:49:59,982]^;INFO^;164^;app.py^;predict()^;app_predictor: <mlstoresales.entity.predictor.App_predictor object at 0x0000024098F1B470>
+[2022-07-29 04:49:59,983]^;INFO^;93^;predictor.py^;predict()^;model_path: models\random_forest_grid.sav
+[2022-07-29 04:50:00,061]^;ERROR^;1456^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py", line 85, in load_object
+    return dill.load(file_obj)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\dill\_dill.py", line 373, in load
+    return Unpickler(file, ignore=ignore, **kwds).load()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\dill\_dill.py", line 646, in load
+    obj = StockUnpickler.load(self)
+_pickle.UnpicklingError: invalid load key, '\x01'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py", line 95, in predict
+    model = load_object(file_path=model_path)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py", line 87, in load_object
+    raise HousingException(e,sys) from e
+mlstoresales.exception.HousingException: Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py] at line number: [87] error message: [invalid load key, '\x01'.]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 165, in predict
+    Item_Outlet_Sales= app_predictor.predict(X=prediction_df)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py", line 101, in predict
+    raise HousingException(e, sys) from e
+mlstoresales.exception.HousingException: Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py] at line number: [101] error message: [Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py] at line number: [87] error message: [invalid load key, '\x01'.]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\fullstackdatascience\ineuron project\ML_StoreSales\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 175, in predict
+    raise HousingException(e , sys)
+mlstoresales.exception.HousingException: Error occured in script: [app.py] at line number: [175] error message: [Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\entity\predictor.py] at line number: [101] error message: [Error occured in script: [C:\fullstackdatascience\ineuron project\ML_StoreSales\mlstoresales\util\util.py] at line number: [87] error message: [invalid load key, '\x01'.]]]
+[2022-07-29 04:50:00,114]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [29/Jul/2022 04:50:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
