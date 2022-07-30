@@ -27,7 +27,11 @@ Item_Outlet_Sales - Sales of the product in the particular store. This is the ou
 
 
 
+[SS High_Level_Design.docx](https://github.com/codeofelango/ineuronproject_storesales/files/9224804/SS.High_Level_Design.docx)
+[SS Low_Level_Design.docx](https://github.com/codeofelango/ineuronproject_storesales/files/9224806/SS.Low_Level_Design.docx)
 
+![homepage](https://user-images.githubusercontent.com/85941190/181875169-46c17560-ae8d-4578-8ea9-f1f21eeaf936.PNG)
+![predictionj](https://user-images.githubusercontent.com/85941190/181875243-4d5cccd7-fc45-4a38-84d3-5001d572b7b6.PNG)
 
 
 1. [Github Account](https://github.com)
