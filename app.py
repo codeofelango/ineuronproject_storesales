@@ -162,19 +162,15 @@ def predict():
 
             app_predictor = App_predictor(model_dir=MODEL_DIR)
             logging.info(f"app_predictor: {app_predictor}")
-            Item_Outlet_Sales= app_predictor.predictwithtransform(X=prediction_df)
-            # context = {     
-            #     PREDICTOR_DATA_KEY : prediction_data.get_housing_data_as_dict(),
-            #     ITEM_OUTLET_SALES: Item_Outlet_Sales,
-            # }
-            context = {
-        PREDICTOR_DATA_KEY: None,
-        ITEM_OUTLET_SALES : Item_Outlet_Sales
-    }
-            return render_template('result.html', context=context)
+            Item_Outlet_Sales= app_predictor.predict(X=prediction_df)
+            context = {     
+                PREDICTOR_DATA_KEY : prediction_data.get_housing_data_as_dict(),
+                ITEM_OUTLET_SALES: Item_Outlet_Sales,
+            }
+            logging.info(f"context: {context}")
         except Exception as e:
-            raise HousingException(e , sys)
-        return render_template('result.html', context=context)
+            raise HousingException(e, sys) from e
+        return render_template('predict.html', context=context)
     return render_template("predict.html", context=context)
 
 
